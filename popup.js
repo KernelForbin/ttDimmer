@@ -1,9 +1,9 @@
-var map = new Object();
-map['top-panel'] = '$("#top-panel")';
-map['room'] = '$(\'.roomView > div:nth-child(2)\')';
-map['playlist'] = '$("#playlist")';
-map['chat'] = '$(".chat-container")';
-map['pmWindows'] = '$("#pmWindows")';
+var map = {};
+map.header 		='$("#header")';
+map.room 		='$("#scene")';
+map.sidebar 	='$(".floating-panel-tabs")';
+map.pmWindows 	= '$("#pmWindows")';
+map.chatAvatars 	= '$(".message .avatar")';
 
 chrome.tabs.executeScript(null, { file : 'jquery.js' });
 function click(e) {
@@ -13,7 +13,7 @@ function click(e) {
 
 document.addEventListener('DOMContentLoaded', function () {
   var checkboxes = document.querySelectorAll('input');
-  for (var i = 0; i < checkboxes.length; i++) {
-    checkboxes[i].addEventListener('click', click);
+  for (prop in map) {
+    checkboxes[prop].addEventListener('click', click);
   }
 });
