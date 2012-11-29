@@ -1,0 +1,23 @@
+{
+  "name": "ttDimmer",
+  "version": "1.3",
+  "description": "Control TT's UI chrome",
+  "homepage_url": "http://stats.thephish.fm/dimmer.php",
+  "icons": {  "16": "icon-16.png",
+    		  "48": "icon-48.png",
+		      "128": "icon-128.png" },
+  "permissions": [
+    "tabs", "http://turntable.fm/*"
+  ],
+  "browser_action": {
+      "default_title": "Dim all TT chrome except chat, queue, and PMs.",
+      "default_popup": "popup.html"
+  },
+	"content_scripts": [
+	{
+	  "matches": ["http://turntable.fm/*"],
+	  "js": ["jquery.js"]
+	}
+	],
+  "manifest_version": 2
+}
