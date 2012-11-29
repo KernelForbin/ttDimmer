@@ -1,6 +1,6 @@
 {
   "name": "ttDimmer",
-  "version": "1.3",
+  "version": "1.4",
   "description": "Control TT's UI chrome",
   "homepage_url": "http://stats.thephish.fm/dimmer.php",
   "icons": {  "16": "icon-16.png",
