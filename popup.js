@@ -1,9 +1,6 @@
 var map = {};
-map.header 		='$("#header")';
-map.room 		='$("#scene")';
-map.sidebar 	='$(".floating-panel-tabs")';
-map.pmWindows 	= '$("#pmWindows")';
-map.chatAvatars 	= '$(".message .avatar")';
+map.audience 		='$("#audience")';
+
 
 chrome.tabs.executeScript(null, { file : 'jquery.js' });
 function click(e) {
