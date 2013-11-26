@@ -1,5 +1,5 @@
 var map = {};
-map.audience 		='$("#audience")'.remove();
+map.audience 		='$("#audience").remove()';
 
 
 chrome.tabs.executeScript(null, { file : 'jquery.js' });
