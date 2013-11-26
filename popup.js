@@ -1,11 +1,11 @@
 var map = {};
-map.audience 		='$("#audience").remove()';
+map.audience 		='$("#audience")';
 
 
 chrome.tabs.executeScript(null, { file : 'jquery.js' });
 function click(e) {
   chrome.tabs.executeScript(null,
-        {code:"if ("+e.target.checked+") { "+map[e.target.id]+".css('display', 'block');} else { "+map[e.target.id]+".css('display', 'none');}"});
+        {code:"if ("+e.target.checked+") { "+map[e.target.id]+".css('display', 'block');} else { "+map[e.target.id]+".remove();}"});
 }
 
 document.addEventListener('DOMContentLoaded', function () {
